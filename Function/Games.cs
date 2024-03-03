@@ -74,10 +74,7 @@ public class Games
         // transform WishlistModel into WishlistTableModel and write row to table; partition + row key need to be unique!
         var createTableRow = await _table.AddEntityAsync<WishlistTableModel>(new()
         {
-            RowKey = addGameReq.Id,
-            Name = addGameReq.Name,
-            Url = addGameReq.Url,
-            ReleaseDate = addGameReq.ReleaseDate
+            RowKey = addGameReq.Id
 
         });
 

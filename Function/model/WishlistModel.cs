@@ -8,10 +8,7 @@ namespace AzureFunctionExample.Model;
 /// <param name="ReleaseDate">Date of publication of the game.</param>
 public record WishlistModel
 (
-    string Id,
-    string Name,
-    string Url,
-    int ReleaseDate
+    string Id
 )
 {
     // helper method to transform a given WishlistTableModel to a WishlistModel
@@ -19,10 +16,7 @@ public record WishlistModel
     {
         return new
         (
-            Id: row.RowKey,
-            Name: row.Name,
-            Url: row.Url,
-            ReleaseDate: row.ReleaseDate
+            Id: row.RowKey
         );
     }
 };
