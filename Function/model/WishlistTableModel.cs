@@ -15,10 +15,4 @@ public class WishlistTableModel : ITableEntity
 
     // used for cache validation; can be ingored for our use case
     public ETag ETag { get; set; }
-
-    public required string Name { get; set; }
-
-    public required string Url { get; set; }
-
-    public required int ReleaseDate { get; set; }
 }
